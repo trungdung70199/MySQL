@@ -43,3 +43,44 @@ VALUES ('"D00002"', "tea", 400, 100);
 
 -- Delete from items
 DELETE FROM items WHERE code = "D00004";
+
+-- 
+SELECT COUNT (id) AS item_count FROM items;
+
+--
+SELECT COUNT (id) AS user_count FROM users;
+
+-- SUM
+SELECT SUM(price) AS total_price FROM items;
+
+-- AVG
+SELECT AVG(price) AS avarage_price FROM items;
+
+-- max, MIN
+SELECT MAX(price) AS max_price,
+MIN (price) AS min_price FROM items;
+
+-- ALL
+SELECT COUNT(id) AS item_count,
+SUM(price) AS total_price,
+MAX(price) AS max_price,
+MIN(price) AS min_price
+FROM items;
+
+--  from items table's price  no tax
+SELECT price / 1.1 AS price_without_tax FROM items;
+
+--round
+SELECT ROUND(price / 1.1) AS price_without_tax FROM items;
+
+SELECT 
+name, 
+price,
+ROUND(price / 1.1) AS price_without_tax 
+FROM items;
+
+-- Ket hop
+SELECT CONCAT(code, name) FROM items;
+SELECT CONCAT(code, " : ", name) AS code_and_name FROM items;
+
+--

@@ -31,3 +31,15 @@ SELECT * FROM users ORDER BY email ASC;
 -- Sap xep ten email theo a-z  theo thu tu nguoc lai
 SELECT * FROM users ORDER BY email DESC;
 
+-- chon 10 gia tri tu cuoi cung trong users table
+SELECT * FROM users ORDER BY id DESC LIMIT 10;
+
+-- items table 
+INSERT INTO 'items' ('code', 'name', 'price', 'stock')
+VALUES ('"D00001"', '"Coffee"', 300, 100);
+
+INSERT INTO 'items' ('code', 'name', 'price', 'stock')
+VALUES ('"D00002"', "tea", 400, 100);
+
+-- Delete from items
+DELETE FROM items WHERE code = "D00004";

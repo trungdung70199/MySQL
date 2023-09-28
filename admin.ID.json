@@ -1,0 +1,69 @@
+[{
+  "_id": {
+    "$oid": "650a60aafcfa1ce48af05c45"
+  },
+  "--": "--",
+  "phpMyAdmin": "version",
+  "SQL": "5.1.1"
+},
+{
+  "_id": {
+    "$oid": "650a60aafcfa1ce48af05c46"
+  },
+  "--": "--",
+  "phpMyAdmin": "https://www.phpmyadmin.net/"
+},
+{
+  "_id": {
+    "$oid": "650a60aafcfa1ce48af05c47"
+  },
+  "--": "--"
+},
+{
+  "_id": {
+    "$oid": "650a60aafcfa1ce48af05c48"
+  },
+  "--": "--",
+  "phpMyAdmin": "ホスト:",
+  "SQL": "localhost:8889"
+},
+{
+  "_id": {
+    "$oid": "650a60aafcfa1ce48af05c49"
+  },
+  "--": "--",
+  "phpMyAdmin": "生成日時:",
+  "SQL": 2023,
+  "Dump": "年"
+},
+{
+  "_id": {
+    "$oid": "650a60aafcfa1ce48af05c4a"
+  },
+  "--": "--",
+  "phpMyAdmin": "サーバのバージョン：",
+  "SQL": "5.7.34"
+},
+{
+  "_id": {
+    "$oid": "650a60aafcfa1ce48af05c4b"
+  },
+  "--": "--",
+  "phpMyAdmin": "PHP",
+  "SQL": "のバージョン:",
+  "Dump": "8.0.8"
+},
+{
+  "_id": {
+    "$oid": "650a60aafcfa1ce48af05c4c"
+  }
+},
+{
+  "_id": {
+    "$oid": "650a60aafcfa1ce48af05c4d"
+  },
+  "--": "SET",
+  "phpMyAdmin": "SQL_MODE",
+  "SQL": "=",
+  "Dump": "NO_AUTO_VALUE_ON_ZERO\";\nSTART TRANSACTION;\nSET time_zone = \"+00:00\";\n\n\n/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;\n/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;\n/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;\n/*!40101 SET NAMES utf8mb4 */;\n\n--\n-- データベース: `bookings`\n--\n\n-- --------------------------------------------------------\n\n--\n-- テーブルの構造 `reserves`\n--\n\nCREATE TABLE `reserves` (\n  `id` bigint(20) UNSIGNED NOT NULL,\n  `user_id` bigint(20) UNSIGNED NOT NULL,\n  `room_id` bigint(20) UNSIGNED NOT NULL,\n  `checkin_at` datetime NOT NULL,\n  `checkout_at` datetime NOT NULL,\n  `created_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,\n  `updated_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP\n) ENGINE=InnoDB DEFAULT CHARSET=utf8;\n\n--\n-- テーブルのデータのダンプ `reserves`\n--\n\nINSERT INTO `reserves` (`id`, `user_id`, `room_id`, `checkin_at`, `checkout_at`, `created_at`, `updated_at`) VALUES\n(1, 1, 2, '2023-07-07 15:00:00', '2023-07-08 10:00:00', '2023-07-26 22:04:42', '2023-07-26 22:04:42'),\n(2, 2, 5, '2023-07-01 15:00:00', '2023-07-02 10:00:00', '2023-07-26 22:05:16', '2023-07-26 22:05:16'),\n(3, 17, 5, '2023-07-03 15:00:00', '2023-07-04 10:00:00', '2023-07-26 22:11:32', '2023-07-26 22:11:32'),\n(4, 10, 1, '2023-07-07 15:00:00', '2023-07-08 10:00:00', '2023-07-26 22:12:18', '2023-07-26 22:12:18'),\n(5, 3, 1, '2023-07-01 15:00:00', '2023-07-03 10:00:00', '2023-07-26 22:13:18', '2023-07-26 22:13:18'),\n(6, 9, 2, '2023-07-02 15:00:00', '2023-07-03 10:00:00', '2023-07-26 22:14:03', '2023-07-26 22:14:03'),\n(7, 4, 3, '2023-07-01 15:00:00', '2023-07-03 10:00:00', '2023-07-26 22:15:10', '2023-07-26 22:15:10'),\n(8, 5, 2, '2023-07-06 15:00:00', '2023-07-07 10:00:00', '2023-07-26 22:16:09', '2023-07-26 22:16:09'),\n(9, 8, 4, '2023-07-07 15:00:00', '2023-07-08 10:00:00', '2023-07-26 22:18:19', '2023-07-26 22:18:19'),\n(10, 6, 6, '2023-07-01 15:00:00', '2023-07-10 10:00:00', '2023-07-26 22:18:19', '2023-07-26 22:18:19'),\n(11, 2, 3, '2023-07-08 15:00:00', '2023-07-09 10:00:00', '2023-07-26 22:22:42', '2023-07-26 22:22:42'),\n(12, 2, 2, '2023-07-08 15:00:00', '2023-07-09 10:00:00', '2023-07-26 22:23:28', '2023-07-26 22:23:28'),\n(13, 20, 4, '2023-07-08 15:00:00', '2023-07-09 10:00:00', '2023-07-26 22:37:38', '2023-07-26 22:37:38'),\n(14, 17, 2, '2023-07-01 15:00:00', '2023-07-02 10:00:00', '2023-07-26 22:39:56', '2023-07-26 22:39:56'),\n(15, 16, 4, '2023-07-02 15:00:00', '2023-07-04 10:00:00', '2023-07-26 22:42:25', '2023-07-26 22:42:25'),\n(16, 15, 5, '2023-07-02 15:00:00', '2023-07-03 10:00:00', '2023-07-26 22:43:32', '2023-07-26 22:43:32'),\n(17, 11, 3, '2023-07-03 15:00:00', '2023-07-05 10:00:00', '2023-07-26 22:47:50', '2023-07-26 22:47:50'),\n(18, 18, 1, '2023-07-08 15:00:00', '2023-07-10 10:00:00', '2023-07-26 22:49:15', '2023-07-26 22:49:15'),\n(19, 7, 3, '2023-07-06 15:00:00', '2023-07-07 10:00:00', '2023-07-26 22:53:55', '2023-07-26 22:53:55'),\n(20, 12, 4, '2023-07-04 15:00:00', '2023-07-08 10:00:00', '2023-07-26 23:09:02', '2023-07-26 23:09:02'),\n(21, 13, 4, '2023-07-06 15:00:00', '2023-07-07 10:00:00', '2023-07-26 23:20:03', '2023-07-26 23:20:03'),\n(22, 14, 3, '2023-07-07 15:00:00', '2023-07-08 10:00:00', '2023-07-26 23:23:11', '2023-07-26 23:23:11');\n\n-- --------------------------------------------------------\n\n--\n-- テーブルの構造 `rooms`\n--\n\nCREATE TABLE `rooms` (\n  `id` bigint(11) UNSIGNED NOT NULL,\n  `name` varchar(255) NOT NULL,\n  `created_at` datetime NOT NULL,\n  `updated_at` datetime NOT NULL\n) ENGINE=InnoDB DEFAULT CHARSET=utf8;\n\n--\n-- テーブルのデータのダンプ `rooms`\n--\n\nINSERT INTO `rooms` (`id`, `name`, `created_at`, `updated_at`) VALUES\n(1, '101', '2023-07-26 12:45:37', '2023-07-26 12:45:37'),\n(2, '102', '2023-07-26 12:45:56', '2023-07-26 12:45:56'),\n(3, '103', '2023-07-26 12:45:56', '2023-07-26 12:45:56'),\n(4, '201', '2023-07-26 12:46:29', '2023-07-26 12:46:29'),\n(5, '202', '2023-07-26 12:46:29', '2023-07-26 12:46:29'),\n(6, '203', '2023-07-26 12:46:47', '2023-07-26 12:46:47');\n\n-- --------------------------------------------------------\n\n--\n-- テーブルの構造 `users`\n--\n\nCREATE TABLE `users` (\n  `id` bigint(20) UNSIGNED NOT NULL,\n  `name` varchar(255) NOT NULL,\n  `number` varchar(255) NOT NULL,\n  `created_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,\n  `updated_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP\n) ENGINE=InnoDB DEFAULT CHARSET=utf8;\n\n--\n-- テーブルのデータのダンプ `users`\n--\n\nINSERT INTO `users` (`id`, `name`, `number`, `created_at`, `updated_at`) VALUES\n(1, 'Adam', '000001', '2023-07-26 21:52:16', '2023-07-26 21:52:16'),\n(2, 'Bob', '000002', '2023-07-26 21:52:36', '2023-07-26 21:52:36'),\n(3, 'Chris', '000003', '2023-07-26 21:52:47', '2023-07-26 21:52:47'),\n(4, 'David', '000004', '2023-07-26 22:05:59', '2023-07-26 22:05:59'),\n(5, 'Elen', '000005', '2023-07-26 22:06:37', '2023-07-26 22:06:37'),\n(6, 'Fred', '000006', '2023-07-26 22:07:10', '2023-07-26 22:07:10'),\n(7, 'George', '000007', '2023-07-26 22:07:43', '2023-07-26 22:07:43'),\n(8, 'Harry', '000008', '2023-07-26 22:08:23', '2023-07-26 22:08:23'),\n(9, 'John', '000009', '2023-07-26 22:10:05', '2023-07-26 22:10:05'),\n(10, 'Kenny', '000010', '2023-07-26 22:10:44', '2023-07-26 22:10:44'),\n(11, 'Leon', '000011', '2023-07-26 22:28:27', '2023-07-26 22:28:27'),\n(12, 'Michael', '000012', '2023-07-26 22:30:32', '2023-07-26 22:30:32'),\n(13, 'Nancy', '000013', '2023-07-26 22:31:29', '2023-07-26 22:31:29'),\n(14, 'Olive', '000014', '2023-07-26 22:32:34', '2023-07-26 22:32:34'),\n(15, 'Parker', '000015', '2023-07-26 22:33:11', '2023-07-26 22:33:11'),\n(16, 'Rose', '000016', '2023-07-26 22:33:45', '2023-07-26 22:33:45'),\n(17, 'Sherry', '000017', '2023-07-26 22:34:44', '2023-07-26 22:34:44'),\n(18, 'Tony', '000018', '2023-07-26 22:35:16', '2023-07-26 22:35:16'),\n(19, 'Veronica', '000019', '2023-07-26 22:35:57', '2023-07-26 22:35:57'),\n(20, 'Whitney', '000020', '2023-07-26 22:36:25', '2023-07-26 22:36:25');\n\n--\n-- ダンプしたテーブルのインデックス\n--\n\n--\n-- テーブルのインデックス `reserves`\n--\nALTER TABLE `reserves`\n  ADD PRIMARY KEY (`id`),\n  ADD KEY `reserves_user_id` (`user_id`),\n  ADD KEY `reserves_room_id` (`room_id`);\n\n--\n-- テーブルのインデックス `rooms`\n--\nALTER TABLE `rooms`\n  ADD PRIMARY KEY (`id`);\n\n--\n-- テーブルのインデックス `users`\n--\nALTER TABLE `users`\n  ADD PRIMARY KEY (`id`),\n  ADD UNIQUE KEY `number` (`number`);\n\n--\n-- ダンプしたテーブルの AUTO_INCREMENT\n--\n\n--\n-- テーブルの AUTO_INCREMENT `reserves`\n--\nALTER TABLE `reserves`\n  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;\n\n--\n-- テーブルの AUTO_INCREMENT `rooms`\n--\nALTER TABLE `rooms`\n  MODIFY `id` bigint(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;\n\n--\n-- テーブルの AUTO_INCREMENT `users`\n--\nALTER TABLE `users`\n  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;\n\n--\n-- ダンプしたテーブルの制約\n--\n\n--\n-- テーブルの制約 `reserves`\n--\nALTER TABLE `reserves`\n  ADD CONSTRAINT `reserves_room_id` FOREIGN KEY (`room_id`) REFERENCES `rooms` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,\n  ADD CONSTRAINT `reserves_user_id` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;\nCOMMIT;\n\n/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;\n/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;\n/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;\n"
+}]
